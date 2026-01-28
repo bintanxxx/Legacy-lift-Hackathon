@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ LegacyLift AI
 
-## Getting Started
+> **Refactor. Modernize. Migrate.** > An intelligent code evolution platform powered by **Google Gemini 3**.
 
-First, run the development server:
+<div align="center">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Gemini 3](https://img.shields.io/badge/Google%20Gemini%203-8E75B2?style=for-the-badge&logo=google&logoColor=white)
+![Monaco Editor](https://img.shields.io/badge/Monaco_Editor-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+</div>
 
-## Learn More
+<br />
 
-To learn more about Next.js, take a look at the following resources:
+![LegacyLift AI Demo](public/images/demo.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 About The Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+LegacyLift AI is not just a code formatter. It acts as an **AI Software Architect** that helps developers transform legacy codebases into modern, high-performance applications.
 
-## Deploy on Vercel
+Whether you need to clean up spaghetti code, modernize syntax (e.g., React Class to Hooks), or port logic to a completely different language (e.g., Python to Go), LegacyLift handles it with deep reasoning capabilities provided by **Gemini 3**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **🧹 Smart Refactoring:** Automatically separates concerns, improves naming, and modularizes monolithic functions.
+- **✨ Syntax Modernization:** Upgrades legacy patterns (Callbacks, Class Components) to modern standards (Async/Await, Hooks) without breaking logic.
+- **🚀 Polyglot Migration:** intelligently ports code between languages (JS, Python, Go, PHP) while preserving idiomatic best practices.
+- **📱 Native-Like UI:** Fully responsive design with a "VS Code-like" experience on Desktop and a compact, app-like interface on Mobile.
+- **⚡ Real-time Diff:** Side-by-side comparison to verify AI changes instantly.
+
+## 🛠️ Tech Stack
+
+### Frontend & UI
+
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + [Shadcn UI](https://ui.shadcn.com/)
+- **Editor Engine:** Monaco Editor (Powering the VS Code experience)
+
+### Backend, Data & Auth
+
+- **Database:** [Supabase](https://supabase.com/) (PostgreSQL)
+- **ORM:** [Prisma](https://www.prisma.io/) (Type-safe database access)
+- **Authentication:** JWT (JSON Web Tokens) with Middleware protection
+- **Storage:** Supabase Storage (For saving refactoring history/assets)
+
+### Artificial Intelligence
+
+- **Core Engine:** [Google Gemini 3 Pro](https://ai.google.dev/) (`gemini-1.5-pro-latest` / Experimental)
+- **SDK:** Google GenAI SDK for Node.js
+
+## 💻 Getting Started
+
+Follow these steps to run the project locally:
+
+1.  **Clone the repository**
+
+    ```bash
+    git clone [https://github.com/username/legacy-lift.git](https://github.com/username/legacy-lift.git)
+    cd legacy-lift
+    ```
+
+2.  **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Setup Environment Variables**
+    Create a `.env` file in the root directory and add your API Keys:
+
+    ```env
+    # Google Gemini
+    GEMINI_API_KEY=your_gemini_api_key
+
+    # Database (Supabase)
+    DATABASE_URL="postgresql://user:password@host:port/db?schema=public"
+    DIRECT_URL="postgresql://..."
+
+    # Auth Secrets
+    JWT_SECRET=your_jwt_secret_key
+    ```
+
+4.  **Run Database Migrations**
+
+    ```bash
+    npx prisma generate
+    npx prisma db push
+    ```
+
+5.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+6.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+Built with ❤️ for the **Google Gemini 3 Hackathon**.
