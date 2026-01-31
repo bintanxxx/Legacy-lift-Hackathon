@@ -30,7 +30,7 @@ export default function Home() {
 
   const handleRefactor = async () => {
     setIsLoading(true);
-    setOutputCode("// Analyzing code structure...");
+    // setOutputCode("// Analyzing code structure..."); // Opsional: Hapus ini biar user gak liat kedip
     try {
       const response = await fetch("/api/refactor", {
         method: "POST",
@@ -42,8 +42,21 @@ export default function Home() {
           target: target,
         }),
       });
-      const data = await response.json();
-      setOutputCode(data.refactoredCode || "// Error: Failed to get response.");
+
+      // --- BAGIAN YANG DIUBAH MULAI DARI SINI ---
+
+      const result = await response.json(); // 1. Kita namakan 'result' (bukan data)
+
+      // 2. Kita cek apakah ada object 'data' di dalamnya
+      if (result.success && result.data) {
+        // 3. Ambil refactoredCode dari DALAM object 'data'
+        setOutputCode(result.data.refactoredCode);
+      } else {
+        // Handle jika error dari backend
+        setOutputCode(result.error || "// Error: Failed to get response.");
+      }
+
+      // --- BATAS PERUBAHAN ---
     } catch (error) {
       console.error(error);
       setOutputCode("// Error: Something went wrong.");
