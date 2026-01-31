@@ -3,7 +3,7 @@ import { aiClient } from "@/lib/gemini";
 
 // Definisi Model
 const PRIMARY_MODEL = "gemini-2.5-flash"; // Si Jenius (Utama)
-const BACKUP_MODEL = "gemini-2.0-flash"; // Si Stabil (Cadangan)
+const BACKUP_MODEL = "gemini-2.0  -flash"; // Si Stabil (Cadangan)
 
 // Helper function untuk memanggil AI
 async function generateRefactor(modelName: string, prompt: string) {
